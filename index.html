@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Professional Planner</title>
+    <link rel="stylesheet" href="design.css">
+
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">Blyaat</div>
+            <nav>
+                <div class="nav-item active">Weekly View</div>
+            </nav>
+            <div class="detail-viewer">
+                <label>Task Detail Viewer</label>
+                <input type="text" id="detail-search" placeholder="Enter task name...">
+                <div id="detail-display" class="detail-display">
+                    <p class="placeholder-text">Search a task to see details.</p>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <button id="add-task-btn" class="primary-btn">+ New Task</button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="date-navigator">
+                    <button id="prev-week" class="icon-btn">←</button>
+                    <h2 id="week-display">Loading...</h2>
+                    <button id="next-week" class="icon-btn">→</button>
+                </div>
+                <div class="user-profile">
+                    <span>Indian Nigga</span>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+            <section class="calendar-grid" id="calendar-grid"></section>
+        </main>
+    </div>
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <h3>Schedule New Task</h3>
+            <div class="input-group">
+                <label for="task-input">Task Name</label>
+                <input type="text" id="task-input" placeholder="e.g. Project Presentation">
+            </div>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date">
+                </div>
+                <div class="input-group">
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="end-time">End Time</label>
+                <input type="time" id="end-time">
+            </div>
+            <div class="modal-actions">
+                <button id="save-task-btn" class="save-btn">Save Task</button>
+                <button id="close-modal-btn" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="maincode.js"></script>
+</body>
+
+</html>
